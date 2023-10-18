@@ -13,17 +13,20 @@ for s in turtle_shapes:
   t = trtl.Turtle(shape=s)
   my_turtles.append(t)
 
-#
+#controls the bend of of the turtle
+start_x = trtl.xcor()
+start_y = trtl.ycor()
+
 startx = 0
 starty = 0
 
-#
+#tells the turtle where to go
 for t in my_turtles:
   t.goto(startx, starty)
   t.right(45)
   t.forward(50)
 
-#
+#increases how far the turtle stretches
   startx = startx + 50
   starty = starty + 50
 
