@@ -11,24 +11,24 @@ turtle_colors = ["red", "blue", "green", "orange", "purple", "gold"]
 
 for s in turtle_shapes:
   t = trtl.Turtle(shape=s)
+  t.penup()
   my_turtles.append(t)
-
+  t.color("red")
+  new_color = turtle_colors.pop()
 #controls the bend of of the turtle
-start_x = trtl.xcor()
-start_y = trtl.ycor()
-
 startx = 0
 starty = 0
 
 #tells the turtle where to go
 for t in my_turtles:
   t.goto(startx, starty)
+  t.pendown()
   t.right(45)
   t.forward(50)
 
 #increases how far the turtle stretches
-  startx = startx + 50
-  starty = starty + 50
+  startx = t.xcor()
+  starty = t.ycor()
 
 wn = trtl.Screen()
 wn.mainloop()
