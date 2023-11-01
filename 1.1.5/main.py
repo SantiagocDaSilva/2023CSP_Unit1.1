@@ -11,17 +11,13 @@ turtle_scale = 1.5
 #------ robot commands
 def move():
   robot.dot(10)
-  robot.fd(70)
+  robot.fd(50)
 
 def turn_left():
   robot.speed(0)
   robot.lt(90)
   robot.speed(2)
 
-def turn_right():
-  robot.speed(0)
-  robot.rt(90)
-  robot.speed(2)
 #----- init screen
 wn = trtl.Screen()
 wn.setup(width=screen_w, height=screen_h)
@@ -41,21 +37,22 @@ robot.speed(2)
 robot.showturtle()
 
 #---- TODO: change maze here
-wn.bgpic("maze2.png") # other file names should be maze2.png, maze3.png
+wn.bgpic("maze1.png") # other file names should be maze2.png, maze3.png
 
 #---- TODO: begin robot movement here
 # move robot forward with move()
 # turn robot left with turn_left()
 # sample for loop:
 
-for step in range(2): # forward 3
+for step in range(4): # forward 3
   move()
-
-for step in range(3): # turn right
+for step in range(3):
   turn_left()
-
-for step in range(3): # forward 3
+for step in range(4):
   move()
+
+
+
 #---- end robot movement
 
 wn.mainloop()

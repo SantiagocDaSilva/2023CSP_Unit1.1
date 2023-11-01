@@ -52,9 +52,6 @@ for step in range(50):
                 horiz_turtles.remove(ht)
                 vert_turtles.remove(vt)
 
-
-
-
 wn = trtl.Screen()
 wn.mainloop()
 
